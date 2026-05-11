@@ -3,82 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <title>Golden City - Roller Coaster Database</title>
+
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f6f8;
-        margin: 0;
-        color: #222;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    color: #222;
+}
 
-    .header {
-        background: #1f2a44;
-        color: white;
-        padding: 20px;
-    }
+.header {
+    background: #1f2a44;
+    color: white;
+    padding: 20px;
+}
 
-    .header h1 {
-        margin: 0;
-        font-size: 28px;
-    }
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+}
 
-    .subheader {
-        font-size: 14px;
-        opacity: 0.85;
-    }
+.subheader {
+    opacity: 0.85;
+    margin-top: 5px;
+}
 
-    .container {
-        width: 90%;
-        max-width: 1100px;
-        margin: 20px auto;
-    }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
 
-    .card {
-        background: white;
-        padding: 15px;
-        margin-bottom: 20px;
-        border-radius: 6px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
 
-    h2 {
-        border-bottom: 2px solid #1f2a44;
-        padding-bottom: 5px;
-    }
+h2 {
+    border-bottom: 2px solid #1f2a44;
+    padding-bottom: 6px;
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
 
-    th, td {
-        text-align: left;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
 
-    th {
-        background: #eef2f7;
-    }
+th {
+    background: #eef2f7;
+}
 
-    .status-operating {
-        color: green;
-        font-weight: bold;
-    }
+.status-operating {
+    color: green;
+    font-weight: bold;
+}
 
-    .info {
-        color: #1f2a44;
-        font-weight: bold;
-        margin-left: 6px;
-        cursor: help;
-    }
+.status-unknown {
+    color: #1d6cff;
+    font-weight: bold;
+}
 
-    .model {
-        color: #555;
-        font-size: 13px;
-        margin-top: 3px;
-    }
+.status-demolished {
+    color: red;
+    font-weight: bold;
+}
+
+.info {
+    color: #1f2a44;
+    margin-left: 6px;
+    cursor: help;
+    font-weight: bold;
+}
+
+.model {
+    color: #555;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.park-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
 </style>
 </head>
 
@@ -87,7 +104,9 @@
 <div class="header">
     <h1>Golden City</h1>
     <div class="subheader">
-        San Francisco, California, United States | Operating Since: 1920 | Owner: Golden Parks LLC
+        San Francisco, California, United States |
+        Operating Since: 1920 |
+        Owner: Golden Parks LLC
     </div>
 </div>
 
@@ -95,103 +114,133 @@
 
     <div class="card">
         <h2>Park Overview</h2>
-        <p><strong>SBNO Status:</strong> Unknown</p>
+
+        <p>
+            <strong>SBNO Status:</strong>
+            <span class="status-unknown">Unknown</span>
+        </p>
+
+        <img src="IMG_2874.jpeg" class="park-image">
     </div>
 
     <div class="card">
         <h2>Operating Coasters</h2>
+
         <table>
 
-            <tr>
-                <td>Cobra <span class="info" title="Vekoma Boomerang">ⓘ</span>
-                    <div class="model">Vekoma Boomerang</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Cobra <span class="info" title="Vekoma Boomerang">ⓘ</span>
+<div class="model">Vekoma Boomerang</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>AtmosFear <span class="info" title="Arrow Dynamics Launched Loop">ⓘ</span>
-                    <div class="model">Arrow Dynamics Launched Loop</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>AtmosFear <span class="info" title="Arrow Dynamics Launched Loop">ⓘ</span>
+<div class="model">Arrow Dynamics Launched Loop</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Terrors <span class="info" title="CCI Wooden Coaster">ⓘ</span>
-                    <div class="model">CCI Wooden Coaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Terrors <span class="info" title="CCI Wooden Coaster">ⓘ</span>
+<div class="model">CCI Wooden Coaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Dive to Atlantis <span class="info" title="Mack Rides Watercoaster">ⓘ</span>
-                    <div class="model">Mack Rides Watercoaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Dive to Atlantis <span class="info" title="Mack Rides Watercoaster">ⓘ</span>
+<div class="model">Mack Rides Watercoaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Flashback <span class="info" title="Intamin Space Diver">ⓘ</span>
-                    <div class="model">Intamin Space Diver</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Flashback <span class="info" title="Intamin Space Diver">ⓘ</span>
+<div class="model">Intamin Space Diver</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Galaxy Spin <span class="info" title="Zamperla Twister 420m">ⓘ</span>
-                    <div class="model">Zamperla Twister 420m</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Galaxy Spin <span class="info" title="Zamperla Twister 420m">ⓘ</span>
+<div class="model">Zamperla Twister 420m</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Thunderhawk <span class="info" title="Vekoma SLC">ⓘ</span>
-                    <div class="model">Vekoma Suspended Looping Coaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Thunderhawk <span class="info" title="Vekoma Suspended Looping Coaster">ⓘ</span>
+<div class="model">Vekoma Suspended Looping Coaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Jr. Torpedo <span class="info" title="E&F Miler Kiddie Coaster">ⓘ</span>
-                    <div class="model">E&F Miler Kiddie Coaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Jr. Torpedo <span class="info" title="E&F Miler Kiddie Coaster">ⓘ</span>
+<div class="model">E&F Miler Kiddie Coaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Torpedo <span class="info" title="Arrow Dynamics Custom Looping Coaster">ⓘ</span>
-                    <div class="model">Arrow Dynamics Custom Looping Coaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Torpedo <span class="info" title="Arrow Dynamics Custom Looping Coaster">ⓘ</span>
+<div class="model">Arrow Dynamics Custom Looping Coaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Red Dust / Green Cyclone <span class="info" title="PTC Wooden Coaster">ⓘ</span>
-                    <div class="model">Philadelphia Toboggan Coasters Wooden Coaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Red Dust / Green Cyclone <span class="info" title="PTC Wooden Coaster">ⓘ</span>
+<div class="model">Philadelphia Toboggan Coasters Wooden Coaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Firehawk <span class="info" title="B&M Standup Coaster">ⓘ</span>
-                    <div class="model">Bolliger & Mabillard Standup Coaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Firehawk <span class="info" title="B&M Standup Coaster">ⓘ</span>
+<div class="model">Bolliger & Mabillard Standup Coaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Timbur <span class="info" title="PTC Wooden Coaster">ⓘ</span>
-                    <div class="model">Philadelphia Toboggan Coasters Wooden Coaster</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Timbur <span class="info" title="PTC Wooden Coaster">ⓘ</span>
+<div class="model">Philadelphia Toboggan Coasters Wooden Coaster</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
 
-            <tr>
-                <td>Sarajevo Bobsleds <span class="info" title="Intamin Swiss Bob">ⓘ</span>
-                    <div class="model">Intamin Swiss Bob</div>
-                </td>
-                <td class="status-operating">Operating</td>
-            </tr>
+<tr>
+<td>Sarajevo Bobsleds <span class="info" title="Intamin Swiss Bob">ⓘ</span>
+<div class="model">Intamin Swiss Bob</div>
+</td>
+<td class="status-operating">Operating</td>
+</tr>
+
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Demolished Coasters</h2>
+
+        <table>
+
+<tr>
+<td>Galaxy Spin</td>
+<td class="status-demolished">Demolished</td>
+</tr>
+
+<tr>
+<td>Mine Train</td>
+<td class="status-demolished">Demolished</td>
+</tr>
+
+<tr>
+<td>Blaster</td>
+<td class="status-demolished">Demolished</td>
+</tr>
 
         </table>
     </div>
